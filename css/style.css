@@ -1,0 +1,210 @@
+/* Your styles go here — you'll start filling this in during Lesson 2.2 (CSS week). */
+:root {
+  --accent: #50b800;
+  --bg: #347700;
+  --text: #ffffff;
+  --surface: rgba(255, 255, 255, 0.1); 
+  --border-color: rgba(96, 223, 0, 0.3);
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --text-glow: 0 0 10px var(--accent);
+  
+  /* Standard Hover Settings */
+  --hover-color: #008f18;     /* Nav link hover text color */
+  --btn-hover-bg: #50b800;    /* Button hover background color */
+  --btn-hover-text: #ffffff;  /* Button hover text color */
+  
+  /* Accent Two Fallback */
+  --accent-two: #50b800;      /* Standard active button color */
+}
+
+/* Original checkbox toggle logic using your friend's dark theme styles */
+body:has(#dark-mode-toggle:checked) {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #494949;
+  --surface: rgba(20, 20, 30, 0.85);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --text-glow: none;
+  
+  /* Dark Mode Hover Settings */
+  --hover-color: #999999;     
+  --btn-hover-bg: #494949;    
+  --btn-hover-text: #ffffff;  
+  --accent-two: #494949;      /* Dark mode active button color */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 20px;
+}
+
+/* Hides the raw checkbox inputs so only your nice button labels show */
+#dark-mode-toggle,
+#gradient-mode-toggle {
+  display: none;
+}
+
+/* Styles both toggle button rectangles exactly the same way */
+label[for="dark-mode-toggle"],
+label[for="gradient-mode-toggle"] {
+  font-weight: 600;
+  cursor: pointer;
+  display: block;      /* Stacks them underneath each other */
+  width: max-content;  /* Wraps the box tightly around the text */
+  margin-bottom: 12px; /* Adds a clean gap below each box */
+  padding: 8px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+/* Dynamic button hover behavior mapped perfectly to variables */
+label[for="dark-mode-toggle"]:hover,
+label[for="gradient-mode-toggle"]:hover,
+button:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
+/* Brightens the Dark Mode button when actively selected */
+body:has(#dark-mode-toggle:checked) label[for="dark-mode-toggle"] {
+  background: var(--accent);
+  border-color: var(--text);
+}
+
+/* Brightens the Gradient button using your new accent variable when active */
+body:has(#gradient-mode-toggle:checked) label[for="gradient-mode-toggle"],
+body.gradient-mode label[for="gradient-mode-toggle"] {
+  background: var(--accent-two); /* Uses your custom accent two value */
+  border-color: var(--text);
+}
+
+/* Navigation bar */
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: var(--accent);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Dynamic Link Hover State */
+nav a:hover {
+  color: var(--hover-color); 
+  text-shadow: 0 0 8px var(--hover-color);
+}
+
+/* Headings */
+h1 {
+  font-size: 36px;
+  color: var(--accent); 
+  text-shadow: var(--text-glow);
+}
+
+header h3 {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Main Content Containers */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+p {
+  padding: 10px;
+  line-height: 16px;
+}
+
+/* Standard Buttons (like your "Show Gallery" button) */
+button {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Images */
+img {
+  max-width: 350px;
+  display: block;
+  margin: 20px 0;
+  border-radius: 40%;
+  border: 2px solid #000000;
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border-color);
+  margin: 24px 0;
+}
+
+/* --- ACTIVATING MATRIX GRADIENT MODE --- */
+body:has(#gradient-mode-toggle:checked),
+body.gradient-mode {
+  background: linear-gradient(135deg, #000000, #051a00, #003300, #000000);
+  background-size: 400% 400%;
+  animation: matrixShift 12s ease infinite;
+  
+  --text: #39ff14;                
+  --accent: #00ff00;              
+  --surface: rgba(0, 15, 0, 0.85); 
+  --border-color: #00ff00;        
+  --box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  
+  /* Matrix Mode Specific Hover Variations */
+  --hover-color: #000000;       /* Nav link hover text color */
+  --btn-hover-bg: #0e7501;      /* Button hover background color */
+  --btn-hover-text: #ffffff;    /* Button hover text color */
+  
+  /* Your customized active button color token */
+  --accent-two: #0e7501;        /* Change this value to style the ON button color! */
+}
+
+body:has(#gradient-mode-toggle:checked) nav a,
+body.gradient-mode nav a {
+  color: #ffffff;
+}
+
+@keyframes matrixShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
