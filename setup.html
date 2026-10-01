@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/favicon.ico.png">
-    <meta name="description" content="Battle Cats">
     <meta charset="UTF-8">
-  <title>Battle Cats — Bruce</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Cats — Bruce</title>
+    <meta name="description" content="A summary of my achievements and unit gallery in the mobile game Battle Cats.">
+    <link class="favicon" rel="icon" href="images/favicon.ico.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-  <input type="checkbox" id="dark-mode-toggle">
-<label for="dark-mode-toggle">🌙 Dark mode</label>
 
-  <input type="checkbox" id="gradient-mode-toggle">
-<label for="gradient-mode-toggle">🔭Gradient mode</label>
+    <!-- Mode Toggles -->
+    <div class="mode-toggles">
+        <input type="checkbox" id="dark-mode-toggle">
+        <label for="dark-mode-toggle">🌙 Dark mode</label>
+        
+        <input type="checkbox" id="gradient-mode-toggle">
+        <label for="gradient-mode-toggle">🔭 Gradient mode</label>
+    </div>
 
     <header>
         <h1>Battle Cats</h1>
         <nav>
-            <a href="index.html">Home</a><br>
-            <a href="about.html">About Me</a><br>
-            <a href="work.html">My Work</a><br>
-            <a href="setup.html">Battle Cats</a><br>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="work.html">My Work</a>
+            <a href="setup.html">Battle Cats</a>
         </nav>
-      </header>
+    </header>
     
     <main>
-        <h1>Battle Cats.</h1>
-        <h2>A quick explanation of what Battle Cats is</h2>
-        Battle Cats is a mobile game that the main goal is beating the enemy's base<br>
-        while also making sure your's doesn't get destroyed. From either side, you can spawn out units<br>
-        and your units fight against the enemy's units in a battle to see who will prevail.
+        <!-- Removed duplicate <h1> since it's already in the header -->
+        <section id="explanation">
+            <h2>A quick explanation of what Battle Cats is</h2>
+            <p>
+                Battle Cats is a mobile game where the main goal is beating the enemy's base 
+                while also making sure yours doesn't get destroyed. From either side, you can spawn 
+                out units and your units fight against the enemy's units in a battle to see who will prevail.
+            </p>
+        </section>
 
-        <h2>Achievements of mine</h2>
+        <hr>
+
+        <section id="achievements">
+            <h2>Achievements of mine</h2>
             <ul>
-                <li>I have 200 hours in this mobile game</li>
-                <li>I have one of the best units in the game which is Dasli (short for Kasli the Bane).</li>
-                <li>I have two legend rares which have a 0.3% of rolling in the gacha banner.</li>
+                <li>I have 200 hours in this mobile game.</li>
+                <li>I have one of the best units in the game which is <strong>Dasli</strong> (short for Kasli the Bane).</li>
+                <li>I have two legend rares which have a <strong>0.3%</strong> chance of rolling in the gacha banner.</li>
             </ul>
+        </section>
             
+        <hr>
 
-        <h2>A little gallery of units or "cats".</h2>
-        <button id="gallery-btn">Show Gallery</button>
-        <div id="cat-gallery" style="display: none; margin-top: 15px;">
-
-          <img src="images/Dasli.png" style="max-width: 200px"> <img src="images/Hayabusa.png" style="max-width: 200px"> <img src="images/Lasvoss.png" style="max-width: 200px">   
-                 
+        <section id="gallery">
+            <h2>A little gallery of units or "cats"</h2>
+            <button id="gallery-btn">Show Gallery</button>
+            
+            <!-- Fixed: Properly nested and closed the gallery div and images -->
+            <div id="cat-gallery" style="display: none; margin-top: 15px;">
+                <img src="images/Dasli.png" alt="Dasli (Kasli the Bane)" style="max-width: 200px;"> 
+                <img src="images/Hayabusa.png" alt="Hayabusa" style="max-width: 200px;"> 
+                <img src="images/Lasvoss.png" alt="Lasvoss" style="max-width: 200px;">   
+            </div>
+        </section>
     </main>
 
+    <footer>
+        <p>&copy; 2026 Bruce Lilang</p>
+    </footer>
 
-
-     <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
-<footer><p>&copy; 2026 Bruce Lilang</p></footer>
 </html>

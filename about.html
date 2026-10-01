@@ -1,71 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/favicon.ico.png">
-  <meta name="description" content="A page of my story, a few things I am Into
-  and a few facts of me.">
-  <meta charset="UTF-8">
-  <title>About Me — Bruce</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me — Bruce</title>
+    <meta name="description" content="A page of my story, a few things I am into, and a few facts about me.">
+    <link rel="icon" href="images/favicon.ico.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-  <input type="checkbox" id="dark-mode-toggle">
-<label for="dark-mode-toggle">🌙 Dark mode</label>  
 
-  <input type="checkbox" id="gradient-mode-toggle">
-<label for="gradient-mode-toggle">🔭Gradient mode</label>
+    <!-- Mode Toggles -->
+    <div class="mode-toggles">
+        <input type="checkbox" id="dark-mode-toggle">
+        <label for="dark-mode-toggle">🌙 Dark mode</label>
+        
+        <input type="checkbox" id="gradient-mode-toggle">
+        <label for="gradient-mode-toggle">🔭 Gradient mode</label>
+    </div>
 
-
-  <header>
-    <h1>About Me</h1>
-      <nav>
-        <a href="index.html">Home</a><br>
-        <a href="about.html">About Me</a><br>
-        <a href="work.html">My Work</a><br>
-        <a href="setup.html">Battle Cats</a><br>
-      </nav>
-  <header>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="work.html">My Work</a>
+            <a href="setup.html">Battle Cats</a>
+        </nav>
+    </header>
 
     <main>
-<hr>
-      <h2 id="bio-heading">My Story</h2>
-          <p>I am 14 years old and I came to Canada when I was 10 from the Philippines.
-            For the first two years of my time in Canada, I lived in Burnaby and went to school there and two years ago or after grade 7, I moved here to North Vancouver.
-            Now I go to school here where I have made friends that I am thankful for and learned a lot from the help of my peers and great teachers. 
-          </p>
-          
-<hr>
-      <h2>A Few Things I'm Into</h2>
-          <ul>
-            <li> Basketball</li>
-            <li> Drawing</li>
-            <li> Swimming</li>
-            <li> Battle Cats</li>
-          </ul>
-          <img src="images/BattleCats.png" style="margin-top: 10px; max-width:100px">
-          <button id="fact-btn">Fun Fact About me</button>
-<p id="funFact" style="display: none;">I have around 200 hours on Battle cats played</p>
+        <hr>
+        <section id="story">
+            <h2 id="bio-heading">My Story</h2>
+            <p>I am 14 years old and I came to Canada when I was 10 from the Philippines. For the first two years of my time in Canada, I lived in Burnaby and went to school there. Two years ago, after grade 7, I moved here to North Vancouver. Now I go to school here where I have made friends that I am thankful for and learned a lot from the help of my peers and great teachers.</p>
+        </section>
 
-<hr>
-        <h2>Skills</h2>
-          <ul>
-            <li class="skill-pill">Typing: <span class="skill-detail" style="display: none;"> Able to type at 140 words per minute consistently and can reach up to 200 WPM. </span></li>
-            <li class="skill-pill">Determination: <span class="skill-detail" style="display: none;">Will keep trying to reach their goal, which can either be determination or stubborness.</span></li>
-            <li class="skill-pill">Problem solving: <span class="skill-detail" style="display: none;">I can look at what works and fix what doesn't or figure out what is the problem.</span></li>
-          </ul>
+        <hr>
+        <section id="interests">
+            <h2>A Few Things I'm Into</h2>
+            <ul>
+                <li>Basketball</li>
+                <li>Drawing</li>
+                <li>Swimming</li>
+                <li>Battle Cats</li>
+            </ul>
+            <img src="images/BattleCats.png" alt="Battle Cats logo" style="margin-top: 10px; max-width: 100px;">
+            <br>
+            <button id="fact-btn">Fun Fact About me</button>
+            <p id="funFact" style="display: none;">I have around 200 hours on Battle Cats played.</p>
+        </section>
 
-<hr>
-      <h2>Quick Facts</h2>
-        <p>
-          Favourite subject: Information and communication technology<br>
-          A skill I'm proud of: The ability to draw decently<br>
-          Goal for this course: Extending.
-        </p>
+        <hr>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li class="skill-pill">
+                    <strong>Typing:</strong> 
+                    <span class="skill-detail" style="display: none;">Able to type at 140 words per minute consistently and can reach up to 200 WPM.</span>
+                </li>
+                <li class="skill-pill">
+                    <strong>Determination:</strong> 
+                    <span class="skill-detail" style="display: none;">Will keep trying to reach goals, which can either be determination or stubbornness.</span>
+                </li>
+                <li class="skill-pill">
+                    <strong>Problem solving:</strong> 
+                    <span class="skill-detail" style="display: none;">I can look at what works and fix what doesn't or figure out what the problem is.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+        <section id="quick-facts">
+            <h2>Quick Facts</h2>
+            <ul>
+                <li><strong>Favourite subject:</strong> Information and communication technology</li>
+                <li><strong>A skill I'm proud of:</strong> The ability to draw decently</li>
+                <li><strong>Goal for this course:</strong> Extending</li>
+            </ul>
+        </section>
     </main>
 
-  <script src="js/script.js"></script>
-</body>
-<footer><p>&copy; 2026 Bruce</p></footer>
-</html>
+    <footer>
+        <p>&copy; 2026 Bruce</p>
+    </footer>
 
+    <script src="js/script.js"></script>
+</body>
+</html>
